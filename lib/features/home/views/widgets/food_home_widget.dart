@@ -20,7 +20,7 @@ class _HomeFoodWidgetState extends State<HomeFoodWidget> {
       children: [
         Container(
           alignment: Alignment.center,
-          margin: EdgeInsets.all(10),
+          margin: const EdgeInsets.all(10),
           decoration: BoxDecoration(
               color: Colors.white,
               borderRadius: BorderRadius.circular(14)
@@ -32,14 +32,14 @@ class _HomeFoodWidgetState extends State<HomeFoodWidget> {
                 width: 96,
               ),
               Text(foods[widget.index].title),
-              SizedBox(height: 14,),
+              const SizedBox(height: 5,),
               Text("${foods[widget.index].price} \$",
-                style: TextStyle(
+                style: const TextStyle(
                     color: AppColors.orange,
                     fontWeight: FontWeight.bold
                 ),
               ),
-              SizedBox(height: 11,),
+            //   const SizedBox(height: 3,),
             ],
           ),
         ),
@@ -57,6 +57,7 @@ class _HomeFoodWidgetState extends State<HomeFoodWidget> {
               });
             },
             child: CircleAvatar(
+              radius: 18,
               backgroundColor: AppColors.orange.withOpacity(0.1),
               child:    Icon(
 

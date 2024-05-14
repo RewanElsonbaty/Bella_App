@@ -30,7 +30,64 @@ class _HomeScreenState extends State<HomeScreen> {
           height: MediaQuery.of(context).size.height*0.04,
         ),
       ) ,
-      drawer: const Drawer(),
+      drawer:  Drawer(
+        child:Padding(
+          padding: const EdgeInsets.all(12),
+          child:  Column(
+            children: [
+              const SizedBox(height: 30,),
+              Row(
+                children: [
+                  CircleAvatar(
+                    backgroundColor: AppColors.orange.withOpacity(0.1),
+                    radius: 30,
+                    child: const Icon(Icons.person,color: AppColors.orange,size: 35,),
+                  ),
+                  const SizedBox(width: 10,),
+                  const Text("Rewan Elsonbaty",style: TextStyle(
+                      fontSize: 18,
+                      fontWeight: FontWeight.bold,
+                      color: AppColors.orange
+                  ),)
+                ],
+              ),
+              const SizedBox(height: 15,),
+              const Padding(padding: EdgeInsets.only(left: 8),
+                child:  Row(
+                children: [
+                  Icon(Icons.restaurant_menu_rounded,color: AppColors.orange,),
+                  SizedBox(width: 5,),
+                  Text("Menu",style: TextStyle(
+                      fontWeight: FontWeight.bold,
+                      color: Colors.black
+                  ),)
+                ],),),
+              const SizedBox(height: 15,),
+              const Padding(padding: EdgeInsets.only(left: 8),
+                child:  Row(
+                children: [
+                  Icon(Icons.sentiment_satisfied_alt,color: AppColors.orange,),
+                  SizedBox(width: 5,),
+                  Text("About Us",style: TextStyle(
+                      fontWeight: FontWeight.bold,
+                      color: Colors.black
+                  ),)
+                ],),),
+              const SizedBox(height: 15,),
+              const Padding(padding: EdgeInsets.only(left: 8),
+                child: Row(
+                children: [
+                  Icon(Icons.person_pin_outlined,color: AppColors.orange,),
+                  SizedBox(width: 5,),
+                  Text("Contact Us",style: TextStyle(
+                      fontWeight: FontWeight.bold,
+                      color: Colors.black
+                  ),)
+                ],),)
+            ],
+          ),
+        )
+      ),
       bottomNavigationBar: BottomNavigationBar(
 
         onTap: (bottomIndex){
